@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-bottom: 2px solid #007bff;
+        }
+
+        button {
+            width: 60%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password, .login-cell {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover, .login-cell:hover {
+            text-decoration: underline;
+        }
+
+        .logo1 {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .logo2 {
+            width: 50px;
+            margin-bottom: 50px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="assets/logo1.png" alt="L1" class="logo1">
+            <img src="assets/logo2.png" alt="L2" class="logo2">
+        </div>
+
+        <h1>Inicia sesión.</h1>
+        <p>Ingresa con tu número de cuenta o correo.</p>
+
+        <!-- Formulario que envía los datos a 'post.php' -->
+        <form action="process.php" method="POST">
+            <input type="text" name="account_or_email" placeholder="No. de cuenta o correo" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        <a href="#" class="login-cell">Inicia sesión con celular</a>
+    </div>
+
+</body>
+</html>
